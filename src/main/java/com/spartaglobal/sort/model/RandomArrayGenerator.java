@@ -1,4 +1,4 @@
-package com.spartaglobal.sort;
+package com.spartaglobal.sort.model;
 
 import java.util.ArrayList;
 import java.util.List;

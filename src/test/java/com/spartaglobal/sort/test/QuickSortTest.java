@@ -1,16 +1,12 @@
 package com.spartaglobal.sort.test;
 
-import com.spartaglobal.sort.BubbleSort;
 import com.spartaglobal.sort.QuickSort;
-import com.spartaglobal.sort.RandomArrayGenerator;
-import com.spartaglobal.sort.Sorter;
+import com.spartaglobal.sort.model.RandomArrayGenerator;
+import com.spartaglobal.sort.controller.Sorter;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 

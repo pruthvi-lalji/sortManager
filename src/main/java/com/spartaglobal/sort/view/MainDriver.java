@@ -1,8 +1,11 @@
-package com.spartaglobal.sort;
+package com.spartaglobal.sort.view;
 
-import java.sql.SQLOutput;
+import com.spartaglobal.sort.BubbleSort;
+import com.spartaglobal.sort.QuickSort;
+import com.spartaglobal.sort.controller.Sorter;
+import com.spartaglobal.sort.model.RandomArrayGenerator;
+
 import java.util.Arrays;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 

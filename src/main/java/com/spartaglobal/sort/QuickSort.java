@@ -1,9 +1,10 @@
 package com.spartaglobal.sort;
 
-import java.util.ArrayList;
+import com.spartaglobal.sort.controller.Sorter;
+
 import java.util.List;
 
-public class QuickSort implements Sorter{
+public class QuickSort implements Sorter {
     @Override
     public int[] sort(int[] array) {
         if (array == null || array.length == 0){
