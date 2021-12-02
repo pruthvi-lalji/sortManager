@@ -1,29 +1,24 @@
 package com.spartaglobal.sort.controller;
-
-import com.spartaglobal.sort.BubbleSort;
-import com.spartaglobal.sort.GenericBubbleSort;
-import com.spartaglobal.sort.GenericQuickSort;
-import com.spartaglobal.sort.model.RandomArrayGenerator;
+import com.spartaglobal.sort.model.GenericBubbleSort;
+import com.spartaglobal.sort.model.GenericQuickSort;
 import com.spartaglobal.sort.model.RandomArrayGenerator2;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class UserController<T> {
-    private static int BUBBLE_SORT_ARRAY = 1;
-    private static int BUBBLE_SORT_LIST = 2;
     private static Scanner sc = new Scanner(System.in);
     private  int userInput;
     private String userInputed;
-  //  private static int optionSelected;
+
 
 
     private enum Options {ARRAY(1), ARRAYLIST(2), BOTH(3);
-    private int value;
-        private Options(int value){this.value = value;}};
+        private int value;
+        private Options(int value){this.value = value;}
+    };
 
     public<T extends Comparable> void userControl(){
         boolean runSystem = true;
@@ -46,61 +41,48 @@ public class UserController<T> {
                 continue;
             }
             Options sortType;
-            switch (userInput){
-                case 1:
+            switch (userInput) {
+                case 1 -> {
                     GenericSorter bubbleSort = new GenericBubbleSort();
                     System.out.println("------------------------------------Bubble Sort------------------------------------");
                     sortType = listSelection();
-                    if (sortType.equals(Options.ARRAY))
-                        {
-                            System.out.println("Array Selected!");
-                            bubbleSortArray(bubbleSort);
-                            break;
-                        }
-                    if (sortType.equals(Options.ARRAYLIST))
-                    {
+                    if (sortType.equals(Options.ARRAY)) {
+                        System.out.println("Array Selected!");
+                        bubbleSortArray(bubbleSort);
+                    }
+                    else if (sortType.equals(Options.ARRAYLIST)) {
                         System.out.println("Arraylist Selected!");
                         bubbleSortArrayList(bubbleSort);
-                        break;
                     }
-                    else{
+                    else {
                         System.out.println("Both Selected!");
                         bubbleSortArray(bubbleSort);
                         bubbleSortArrayList(bubbleSort);
 
                     }
-                    break;
-
-                case 2:
-                    GenericSorter  quickSort = new GenericQuickSort();
+                }
+                case 2 -> {
+                    GenericSorter quickSort = new GenericQuickSort();
                     List<Integer> randArrayList;
                     System.out.println("------------------------------------Quick Sort------------------------------------");
                     sortType = listSelection();
-                    if (sortType.equals(Options.ARRAY))
-                    {
+                    if (sortType.equals(Options.ARRAY)) {
                         quickSortArray(quickSort);
                         break;
                     }
-                    if (sortType.equals(Options.ARRAYLIST))
-                    {
+                    if (sortType.equals(Options.ARRAYLIST)) {
                         System.out.println("Arraylist Selected!");
                         quickSortArrayList(quickSort);
 
-                    }else{
+                    } else {
                         System.out.println("Array / ArrayList");
                         System.out.println("Array: ");
                         quickSortArray(quickSort);
                         quickSortArrayList(quickSort);
                     }
-
-                    break;
-
-                case 3:
-                    System.out.println("Both");
-                    break;
-                default:
-                    System.out.println("Input a valid option!");
-                    break;
+                }
+                case 3 -> System.out.println("Both");
+                default -> System.out.println("Input a valid option!");
             }
 
         }

@@ -1,6 +1,6 @@
 package com.spartaglobal.sort.test;
 
-import com.spartaglobal.sort.BubbleSort;
+import com.spartaglobal.sort.model.BubbleSort;
 import com.spartaglobal.sort.controller.Sorter;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

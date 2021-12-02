@@ -1,9 +1,8 @@
 package com.spartaglobal.sort.test;
 
-import com.spartaglobal.sort.BubbleSort;
+import com.spartaglobal.sort.model.BubbleSort;
 import com.spartaglobal.sort.model.RandomArrayGenerator;
 import com.spartaglobal.sort.controller.Sorter;
-import org.apache.logging.log4j.core.util.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

@@ -1,8 +1,9 @@
 package com.spartaglobal.sort.view;
 
-import com.spartaglobal.sort.BubbleSort;
-import com.spartaglobal.sort.QuickSort;
+import com.spartaglobal.sort.model.BubbleSort;
+import com.spartaglobal.sort.model.QuickSort;
 import com.spartaglobal.sort.controller.Sorter;
+import com.spartaglobal.sort.controller.UserController;
 import com.spartaglobal.sort.model.RandomArrayGenerator;
 
 import java.util.Arrays;
@@ -20,42 +21,45 @@ public class MainDriver {
 
     public static void main(String[] args) {
 
+        UserController userControl = new UserController();
+        userControl.userControl();
 
 
 
-
-
-        boolean loop = true;
-           while (loop) {
-              try
-              {
-                   System.out.println("Enter B for BubbleSort, Q for QuickSort, A for both,  and X to quit");
-                   userInput = sc.nextLine();
-/*                   if (userInput == null || userInput.isEmpty()) {
-                       System.out.println("Please enter a value");
-                   }*/
-                   array = rd.randArray(100);
-                   arrayList = rd.randArrayList(100);
-                   if (userInput.equals("B") || userInput.equals("b")) {
-                       bubbleSort();
-                   }  if (userInput.equals("Q") || userInput.equals("q")) {
-                       quickSort();
-                   }  if (userInput.equals("A") || userInput.equals("a")) {
-                       bubbleSort();
-                       quickSort();
-                   }  if (userInput.equals("X") || userInput.equals("x")){
-                       loop = false;
-                       System.out.println("System Exited");
-                   }
-                   break;
-           } catch (NullPointerException e){
-                  System.out.println("Entered wrong input");
-                  continue;
-              }
-           }
+        //oldSort();
 
     }
 
+    private static void oldSort() {
+        boolean loop = true;
+        while (loop) {
+           try
+           {
+                System.out.println("Enter B for BubbleSort, Q for QuickSort, A for both,  and X to quit");
+                userInput = sc.nextLine();
+/*                   if (userInput == null || userInput.isEmpty()) {
+                    System.out.println("Please enter a value");
+                }*/
+                array = rd.randArray(100);
+                arrayList = rd.randArrayList(100);
+                if (userInput.equals("B") || userInput.equals("b")) {
+                    bubbleSort();
+                }  if (userInput.equals("Q") || userInput.equals("q")) {
+                    quickSort();
+                }  if (userInput.equals("A") || userInput.equals("a")) {
+                    bubbleSort();
+                    quickSort();
+                }  if (userInput.equals("X") || userInput.equals("x")){
+                    loop = false;
+                    System.out.println("System Exited");
+                }
+                break;
+        } catch (NullPointerException e){
+               System.out.println("Entered wrong input");
+               continue;
+           }
+        }
+    }
 
 
     private static void bubbleSort(){

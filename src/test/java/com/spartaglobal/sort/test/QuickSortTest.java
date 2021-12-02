@@ -1,6 +1,6 @@
 package com.spartaglobal.sort.test;
 
-import com.spartaglobal.sort.QuickSort;
+import com.spartaglobal.sort.model.QuickSort;
 import com.spartaglobal.sort.model.RandomArrayGenerator;
 import com.spartaglobal.sort.controller.Sorter;
 import org.junit.jupiter.api.DisplayName;

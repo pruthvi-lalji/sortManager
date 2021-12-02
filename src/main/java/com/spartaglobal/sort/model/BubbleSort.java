@@ -1,4 +1,4 @@
-package com.spartaglobal.sort;
+package com.spartaglobal.sort.model;
 
 import com.spartaglobal.sort.controller.GenericSorter;
 import com.spartaglobal.sort.controller.Sorter;
