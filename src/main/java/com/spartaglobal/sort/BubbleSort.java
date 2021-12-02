@@ -1,5 +1,6 @@
 package com.spartaglobal.sort;
 
+import com.spartaglobal.sort.controller.GenericSorter;
 import com.spartaglobal.sort.controller.Sorter;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class BubbleSort implements Sorter {
         }
         return array;
     }
-
+    @Override
     public List<Integer> sortList(List<Integer> array){
         if (array == null || array.isEmpty()){
             return null;
@@ -45,7 +46,4 @@ public class BubbleSort implements Sorter {
     }
 
 
-
-
-
-}
+  }
