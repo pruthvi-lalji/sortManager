@@ -5,13 +5,39 @@ import com.spartaglobal.sort.GenericBubbleSort;
 import com.spartaglobal.sort.GenericQuickSort;
 import com.spartaglobal.sort.controller.GenericSorter;
 import com.spartaglobal.sort.model.RandomArrayGenerator;
+import com.spartaglobal.sort.model.RandomArrayGenerator2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class TestClass {
+    private static Object Double;
+    public static Integer array[];
+
     public static void main(String[] args) {
+        RandomArrayGenerator2 rd = new RandomArrayGenerator2(Double.class);
+        System.out.println(Arrays.toString(rd.randArray( 10)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
 
         GenericSorter gs = new GenericBubbleSort();
         GenericSorter quickSort = new GenericQuickSort();
@@ -53,6 +79,6 @@ public class TestClass {
        // System.out.println(gs.sortList(charList));
         System.out.println(quickSort.sortList(charList));
 
-
+*/
     }
 }

@@ -9,8 +9,6 @@ public class RandomArrayGenerator {
     Random rand;
     List<Integer> array;
 
-
-
     public int[] randArray(int arraySize){
         rand = new Random(50);
         int[] array  = new int[arraySize];
@@ -26,9 +24,6 @@ public class RandomArrayGenerator {
         for (int i=0; i < arraySize; i++){
             array.add(rand.nextInt(1000));
         }
-
         return array;
     }
-
-
 }
