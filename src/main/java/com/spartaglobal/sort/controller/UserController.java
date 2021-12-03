@@ -1,229 +1,154 @@
 package com.spartaglobal.sort.controller;
-import com.spartaglobal.sort.model.GenericBubbleSort;
-import com.spartaglobal.sort.model.GenericQuickSort;
-import com.spartaglobal.sort.model.RandomArrayGenerator2;
 
-import java.util.Arrays;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
-public class UserController<T> {
-    private static Scanner sc = new Scanner(System.in);
-    private  int userInput;
+public class UserController {
+    private Scanner sc = new Scanner(System.in);
     private String userInputed;
+    private int userInput;
+    private final SortController sortControl = new SortController();
+    private Class arrayType;
     private LogGenerator logger = new LogGenerator(UserController.class);
-    private Object[] array = null;
-    private  boolean validInput = false;
+    private Options type;
 
-
-    private enum Options {ARRAY(1), ARRAYLIST(2), BOTH(3);
+    private enum Options {ARRAY(1), ARRAYLIST(2), BOTH(3), MENU_MENU(4);
         private int value;
-        private Options(int value){this.value = value;}
+        Options(int value){this.value = value;}
     };
 
-    public<T extends Comparable> void userControl(){
-        boolean runSystem = true;
-        while(runSystem){
-            System.out.println("Enter 1 for BubbleSort, 2 for QuickSort, 3 for both, or X to quit");
-            //takes in the user input as a string
+    public void userControl(){
+        boolean iterOn = true;
+        while(iterOn){
+            System.out.println("---------------------- Sort Manager----------------------\n1: Bubble Sort \n2: Quick Sort \n3: All Sorting Method \nX: Exit");
             userInputed = sc.next();
-            try {
-                //check if user had enter x for quiting the system
-                if (userInputed.equals("X") || userInputed.equals("x")){
-                    runSystem = false;
+            try{
+                if (userInputed.equals("X") ||  userInputed.equals("x")){
+                    iterOn = false;
                     System.out.println("Exited!");
-                    logger.userLogger("Exited System!");
+                    ///LOGGER
                     break;
                 }
-                //Parse the input into the Integers
                 userInput = Integer.parseInt(userInputed);
             } catch (NumberFormatException e){
-                //Input logger here
-
-                System.out.println("Input a valid option!");
-                logger.errorLogger("Wrong User Input: ", e);
+                System.out.println("Enter A Valid Input!");
+                logger.errorLogger("Invalid Input @Main Menu: ", e); //Logger
                 continue;
             }
-            Options sortType;
-            switch (userInput) {
-                case 1 -> {
-                    logger.userLogger("Bubble Sort Picked");
-                    GenericSorter bubbleSort = new GenericBubbleSort();
-                    System.out.println("------------------------------------Bubble Sort------------------------------------");
-                    sortType = listSelection();
-                    if (sortType.equals(Options.ARRAY)) {
-                        System.out.println("Array Selected!");
-                        bubbleSortArray(bubbleSort);
-                    }
-                    else if (sortType.equals(Options.ARRAYLIST)) {
-                        System.out.println("Arraylist Selected!");
-                        bubbleSortArrayList(bubbleSort);
-                    }
-                    else {
-                        System.out.println("Both Selected!");
-                        bubbleSortArray(bubbleSort);
-                        bubbleSortArrayList(bubbleSort);
-
-                    }
+            boolean userPicked = false;
+            do{
+            try {
+                System.out.println("Chose Datatype to use: ");
+                System.out.println("1: Integer \n2: Double \n3: Char");
+                String user = sc.next();
+                if (user.equals("1") || user.equals("1")){
+                    arrayType = Integer.class;
+                    userPicked = true;
                 }
-                case 2 -> {
-                    logger.userLogger("Quick Sort Picked");
-                    GenericSorter quickSort = new GenericQuickSort();
-                    List<Integer> randArrayList;
-                    System.out.println("------------------------------------Quick Sort------------------------------------");
-                    sortType = listSelection();
-                    if (sortType.equals(Options.ARRAY)) {
-                        quickSortArray(quickSort);
-                        break;
-                    }
-                    if (sortType.equals(Options.ARRAYLIST)) {
-                        System.out.println("Arraylist Selected!");
-                        quickSortArrayList(quickSort);
-
-                    } else {
-                        System.out.println("Array / ArrayList");
-                        System.out.println("Array: ");
-                        quickSortArray(quickSort);
-                        quickSortArrayList(quickSort);
-                    }
+                else if (user.equals("2") || user.equals("2")){
+                    arrayType = Double.class;
+                    userPicked = true;
                 }
-                case 3 -> {
-                    System.out.println("Both");
-                    sortType = listSelection();
-                    if (sortType.equals(Options.ARRAY)){
-                        T[] array;
-                        GenericSorter quickSort = new GenericQuickSort();
-                        array = genArray(userInputed);
-                        bubbleSortArray(quickSort);
-
-                    }
-                    if(sortType.equals(Options.ARRAYLIST)){
-
-                    }if (sortType.equals(Options.BOTH)){
-
-                    }
-
-
-
+                else {
+                    arrayType = Character.class;
+                    userPicked = true;
                 }
+            } catch (Exception e){
+                System.out.println("Please Pick one!");
+                logger.errorLogger("Empty/Invalid Input @DataType Menu: ", e);
 
-                default -> System.out.println("Input a valid option!");
             }
+            }while(!userPicked);
 
+
+            switch (userInput){
+                case 1:
+                    //Type of array
+                    type = optionsSelection();
+                    int option = type.value;
+                    //Size of array
+                    int size = arraySize();
+                    logger.userLogger("Algorithm: Bubble Sort, Container:" + type + " Datatype: " + arrayType.getSimpleName());
+                    sortControl.bubbleSort(option,"Integer",size/*,arrayType*/ );
+                    break;
+                case 2:
+                    //quick sort
+                     type = optionsSelection();
+                     option = type.value;
+                     size = arraySize();
+                    logger.userLogger("Algorithm: Quick Sort, Container:" + type + " Datatype: " + arrayType.getSimpleName());
+                    sortControl.quickSort(option, "Integer", size);
+                    break;
+                case 3:
+                    type = optionsSelection();
+                    option = type.value;
+                    size = arraySize();
+                    logger.userLogger("Algorithm: Bubble Sort & Quick Sort, Container:" + type + " Datatype: " + arrayType.getSimpleName());
+                    sortControl.bubbleSort(option,"Integer", size/*, arrayType*/);
+                    sortControl.quickSort(option, "Integer",size);
+                    break;
+                default:
+                    // Invalid option
+                    System.out.println("Invalid");
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+            }
         }
     }
 
 
-    private void sortBubble(GenericSorter bubbleSort){
-
-    }
-
-
-    private void bubbleSortArrayList(GenericSorter bubbleSort) {
-        List<Integer> randArrayList = arrayListGenerator();
-        System.out.println("Unsorted Array: ");
-        System.out.println(randArrayList);
-        System.out.println("Sorted Array: ");
-        System.out.println(bubbleSort.sortList(randArrayList));
-    }
-
-    private <T extends Comparable> void bubbleSortArray(GenericSorter bubbleSort) {
-        T[] randArray = arrayGenerator();
-        System.out.println("Unsorted Array: ");
-        System.out.println(Arrays.toString(randArray));
-        System.out.println("Sorted Array: ");
-        System.out.println(Arrays.toString(bubbleSort.sortArray(randArray)));
-    }
-
-    private <T extends Comparable> void quickSortArray(GenericSorter quickSort) {
-        T[] randArray = arrayGenerator();
-        System.out.println("Unsorted Array: ");
-        System.out.println(Arrays.toString(randArray));
-        System.out.println("Sorted Array: ");
-        System.out.println(Arrays.toString(quickSort.sortArray(randArray)));
-    }
-
-    private void quickSortArrayList(GenericSorter qs) {
-        List<Integer> randArrayList;
-        randArrayList = arrayListGenerator();
-        System.out.println("Unsorted Array: ");
-        System.out.println(randArrayList);
-        System.out.println("Sorted Array: ");
-        System.out.println(qs.sortList(randArrayList));
-    }
-
-
-    //List selection
-    private Options listSelection(){
-        System.out.println("1 for Arrays, 2 for ArrayList or B for Both");
-        userInputed = sc.next();
-        try {
-            if (userInputed.equals("b") || userInputed.equals("B")) {
-                return Options.BOTH;
+    private Options optionsSelection(){
+        System.out.println("Please select a option");
+        System.out.println("1: Arrays");
+        System.out.println("2: Array List");
+        System.out.println("3: Both");
+        System.out.println("M: Go Back To Main Menu");
+        try{
+            userInputed = sc.next();
+            if (userInputed.equals("M") ||  userInputed.equals("m")){
+                userControl();
             }
             userInput = Integer.parseInt(userInputed);
-        }catch (NumberFormatException e){
-            System.out.println("Please select one option!");
-            listSelection();
+        } catch (NumberFormatException e){
+            System.out.println("Enter A Valid Input!");
+            logger.errorLogger("Container Type invalid option picked: ", e);
         }
-        if (userInput < 3){
-            if (userInput == 2){ return Options.ARRAYLIST; }
+        switch (userInput){
+            case 1:
+                return Options.ARRAY;
+            case 2:
+                return Options.ARRAYLIST;
+            case 3:
+                return Options.BOTH;
+            default:
+                optionsSelection();
         }
-        else listSelection();
-
-        return Options.ARRAY;
+    return Options.ARRAY;
     }
 
-
-    private <T> T[]  arrayGenerator(){
-        System.out.println("Would you like to generate random array?  Y for yes or N for N0");
-        userInputed = sc.next();
-        if (userInputed.equals("Y") || userInputed.equals("y")){
-            do {
-            System.out.println("Enter the size of array");
-                array = genArray(userInputed);
-            } while(!validInput);
-
-        } else arrayGenerator();
-        return (T[]) array;
-    }
-
-    private <T> T[] genArray(String userInputed) {
-        try {
-            if (sc.hasNext()) {
-                userInput = sc.nextInt();
-                RandomArrayGenerator2 rd = new RandomArrayGenerator2(Integer.class);
-                array = rd.randArray(userInput);
-                validInput = true;
-            }
+    private int arraySize(){
+        System.out.println("What array size would you like? ");
+        try{
+            userInput = sc.nextInt();
         } catch (InputMismatchException e){
-            System.out.println("Enter Valid Input!");
-            sc.next();
+            System.out.println("Enter a valid value!");
+            logger.errorLogger("Invalid array size picked:", e);
+            arraySize();
         }
-        return (T[]) array;
+        if(userInput < 1){
+            System.out.println("Please enter positive value!");
+            arraySize();
+        }
+        if (userInput > 10000000){
+            System.out.println("Please enter value between 1 to 10000000");
+            arraySize();
+        }
+      return userInput;
     }
-
-
-    private <T> List<T>  arrayListGenerator(){
-        System.out.println("Would you like to generate random array list?  Y for Yes or N for No");
-        userInputed = sc.next();
-        List<T> arrayList = null;
-        if (userInputed.equals("Y") || userInputed.equals("y")){
-            System.out.println("Enter the size of array");
-            try {
-                if (sc.hasNext()) {
-                    userInput = sc.nextInt();
-                    RandomArrayGenerator2 rd = new RandomArrayGenerator2(Integer.class);
-                    arrayList =  rd.randArrayList(userInput);
-                }
-            } catch (InputMismatchException e){
-                System.out.println("Enter Valid Input!");
-            }
-        }else arrayListGenerator();
-        return arrayList;
-    }
-
 
 
 

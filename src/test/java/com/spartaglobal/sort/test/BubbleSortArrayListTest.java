@@ -1,9 +1,7 @@
 package com.spartaglobal.sort.test;
 
 import com.spartaglobal.sort.controller.GenericSorter;
-import com.spartaglobal.sort.model.BubbleSort;
 import com.spartaglobal.sort.model.GenericBubbleSort;
-import com.spartaglobal.sort.controller.Sorter;
 import com.spartaglobal.sort.model.RandomArrayGenerator2;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -60,16 +58,6 @@ public class BubbleSortArrayListTest<T> {
         Arrays.sort(expectedResult);
         assertArrayEquals(expectedResult,actualResult);
     }
-
-
-
-
-
-
-
-
-
-
 
 
     @DisplayName("Empty/Null ArrayList ")

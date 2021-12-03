@@ -2,9 +2,10 @@ package com.spartaglobal.sort.view;
 
 import com.spartaglobal.sort.controller.UserController;
 
-public class TestClass2 {
+public class sortManager {
     public static void main(String[] args) {
-        UserController uc = new UserController();
-        uc.userControl();
+        UserController userController = new UserController();
+        userController.userControl();
+
     }
 }
