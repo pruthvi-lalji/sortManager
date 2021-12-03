@@ -1,0 +1,63 @@
+FILE [INFO ] 2021-12-03 12:00:47,093 main class com.spartaglobal.sort.controller.UserController - Exited System!
+FILE [INFO ] 2021-12-03 12:02:19,789 main java.lang.String[] - Exited System!
+FILE [INFO ] 2021-12-03 12:03:05,363 main com.spartaglobal.sort.controller.UserController - Exited System!
+FILE [INFO ] 2021-12-03 12:05:09,280 main com.spartaglobal.sort.controller.UserController - Exited System!
+FILE [INFO ] 2021-12-03 12:06:28,538 main UserController - Exited System!
+FILE [ERROR] 2021-12-03 12:23:28,732 main UserController - Parse Error: 
+FILE [ERROR] 2021-12-03 12:26:10,664 main UserController - Parsing Error: 
+java.lang.NumberFormatException: For input string: "sfrggerfdverfggffdgg"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserController.userControl(UserController.java:39) [classes/:?]
+	at com.spartaglobal.sort.view.TestClass2.main(TestClass2.java:8) [classes/:?]
+FILE [ERROR] 2021-12-03 12:30:53,656 main UserController - Parsing Error: 
+java.lang.NumberFormatException: For input string: "sdfgsfsghrsth"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserController.userControl(UserController.java:39) [classes/:?]
+	at com.spartaglobal.sort.view.TestClass2.main(TestClass2.java:8) [classes/:?]
+FILE [ERROR] 2021-12-03 12:31:56,429 main UserController - Wrong User Input: 
+FILE [ERROR] 2021-12-03 12:32:38,973 main UserController - Wrong User Input: 
+java.lang.NumberFormatException: For input string: "sf"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserController.userControl(UserController.java:39) [classes/:?]
+	at com.spartaglobal.sort.view.TestClass2.main(TestClass2.java:8) [classes/:?]
+FILE [ERROR] 2021-12-03 12:32:38,985 main UserController - Wrong User Input: 
+java.lang.NumberFormatException: For input string: "dsfdfffddvfd"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserController.userControl(UserController.java:39) [classes/:?]
+	at com.spartaglobal.sort.view.TestClass2.main(TestClass2.java:8) [classes/:?]
+FILE [ERROR] 2021-12-03 12:32:44,429 main UserController - Wrong User Input: 
+java.lang.NumberFormatException: For input string: "sfrfffwef"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserController.userControl(UserController.java:39) [classes/:?]
+	at com.spartaglobal.sort.view.TestClass2.main(TestClass2.java:8) [classes/:?]
+FILE [ERROR] 2021-12-03 12:32:47,463 main UserController - Wrong User Input: 
+java.lang.NumberFormatException: For input string: "efewferff"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserController.userControl(UserController.java:39) [classes/:?]
+	at com.spartaglobal.sort.view.TestClass2.main(TestClass2.java:8) [classes/:?]
+FILE [ERROR] 2021-12-03 12:33:00,294 main UserController - Wrong User Input: 
+java.lang.NumberFormatException: For input string: "stgsdftgtyea"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserController.userControl(UserController.java:39) [classes/:?]
+	at com.spartaglobal.sort.view.TestClass2.main(TestClass2.java:8) [classes/:?]
+FILE [ERROR] 2021-12-03 12:33:02,783 main UserController - Wrong User Input: 
+java.lang.NumberFormatException: For input string: "gsergerg"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserController.userControl(UserController.java:39) [classes/:?]
+	at com.spartaglobal.sort.view.TestClass2.main(TestClass2.java:8) [classes/:?]
