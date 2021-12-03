@@ -7,6 +7,9 @@ import java.util.List;
 public class GenericBubbleSort implements GenericSorter {
     @Override
     public <T extends Comparable> T[] sortArray(T[] array) {
+        if (array == null || array.length == 0){
+            return null;
+        }
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j].compareTo(array[j + 1]) > 0) {
@@ -21,6 +24,9 @@ public class GenericBubbleSort implements GenericSorter {
 
     @Override
     public <T extends Comparable> List<T> sortList(List<T> arrayList) {
+        if (arrayList == null || arrayList.isEmpty()){
+            return null;
+        }
         boolean inOrder = false;
         while (!inOrder) {
             inOrder=true;

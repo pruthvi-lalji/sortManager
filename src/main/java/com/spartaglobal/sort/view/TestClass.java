@@ -2,15 +2,20 @@ package com.spartaglobal.sort.view;
 
 import com.spartaglobal.sort.model.RandomArrayGenerator2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class TestClass {
     private static Object Double;
-    public static Integer array[];
 
     public static void main(String[] args) {
+
         RandomArrayGenerator2 rd = new RandomArrayGenerator2(Double.class);
         System.out.println(Arrays.toString(rd.randArray( 10)));
+        List<Double> doubleList = new ArrayList<>();
+        doubleList = rd.randArrayList(10);
+        System.out.println(doubleList);
 
 
 

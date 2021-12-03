@@ -18,7 +18,6 @@ public class RandomArrayGenerator2<T> {
 
 
     public T[] randArray(int arraySize){
-
         array = (T[]) Array.newInstance(type,arraySize);
         rand = new Random(50);
         if (type == Integer.class){
@@ -27,12 +26,14 @@ public class RandomArrayGenerator2<T> {
                 array[i] = (T) j;
             }
         }
-
-        /*if (type == Double.class){
-
+        if (type == Double.class){
+            for (int i =0; i < arraySize; i++){
+                Double j = rand.nextDouble(1000);
+                array[i] = (T) j;
+            }
         }
 
-        if (type == Long.class){
+       /* if (type == Long.class){
 
         }
 
@@ -46,10 +47,25 @@ public class RandomArrayGenerator2<T> {
     public List<T> randArrayList(int arraySize){
         rand = new Random(50);
         arrayList  = new ArrayList<>();
+        if (type == Integer.class){
         for (int i =0; i < arraySize; i++){
-            Integer ig = rand.nextInt(1000);
+            Integer ig = rand.nextInt(1000+1000)-1000;
             arrayList.add((T) ig);
         }
+        }
+        if (type == Double.class){
+            for (int i =0; i < arraySize; i++){
+                Double j = rand.nextDouble(1000+1000) - 1000;
+                arrayList.add((T) j);
+            }
+        }
+        /* if (type == Long.class){
+
+        }
+
+        if (type == String.class){
+
+        }*/
         return arrayList;
     }
 

@@ -39,8 +39,8 @@ public class QuickSortTest {
     public void arrayWithOne(){
         Sorter qs = new QuickSort();
         int[] array = {4};
-        int[] acutalResult = qs.sort(array);
-        assertArrayEquals(array, acutalResult);
+        int[] actualResult = qs.sort(array);
+        assertArrayEquals(array, actualResult);
     }
 
     @DisplayName("Array with Negative Number")
