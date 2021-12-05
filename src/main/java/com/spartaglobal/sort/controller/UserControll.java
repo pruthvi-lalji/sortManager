@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class UserControll<T> {
 
     private Scanner sc = new Scanner(System.in);
+
     private final LogGenerator logger = new LogGenerator(UserControll.class);
+
     SorterControl sorterControl = new SorterControl();
 
     private enum Options {ARRAY(1), ARRAYLIST(2), BOTH(3);

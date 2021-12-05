@@ -10,10 +10,6 @@ public class SortManager {
         UserControll userControll = new UserControll();
         userControll.start();
 
-
-
-
-
         /*
 
         RandomGenerator<Integer> list = new RandomGenerator<>();
