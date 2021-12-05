@@ -74,6 +74,7 @@ public class GenericQuickSort implements GenericSorter {
     }
 
 
+
     private <T extends Comparable<? super T>> int partition(List<T> arrayList, int lowIdx, int highIdx){
         T pivot = arrayList.get(highIdx);
         int i = (lowIdx-1);
