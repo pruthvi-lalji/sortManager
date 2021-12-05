@@ -1,0 +1,7 @@
+FILE [ERROR] 2021-12-05 23:43:52,808 main UserControll - String parsing error, user entered:  { g }
+java.lang.NumberFormatException: For input string: "g"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:34) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
