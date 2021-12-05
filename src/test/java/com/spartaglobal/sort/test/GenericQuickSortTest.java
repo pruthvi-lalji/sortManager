@@ -1,7 +1,6 @@
 package com.spartaglobal.sort.test;
 
 import com.spartaglobal.sort.controller.GenericSorter;
-import com.spartaglobal.sort.model.GenericBubbleSort;
 import com.spartaglobal.sort.model.GenericQuickSort;
 import com.spartaglobal.sort.model.RandomArrayGenerator2;
 import org.junit.jupiter.api.Disabled;

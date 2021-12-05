@@ -1,18 +1,53 @@
 package com.spartaglobal.sort.model;
 
+import com.spartaglobal.sort.controller.GenericSorter;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-class Node<T>{
-    T data;
-    Node<T> left, right;
+public class BinaryTree<T extends Comparable<T>> implements GenericSorter {
 
-    public Node(T data) {
-        this.data = data;
+  private List<T> arrayList = new ArrayList<>();
+  private T[] array;
+
+
+
+    @Override
+    public <T extends Comparable> T[] sortArray(T[] array) {
+        if (array == null){
+            return null;
+        }
+        else
+        {
+            //insertionLoop(array);
+
+        }
+        return array;
     }
-}
+
+    @Override
+    public <T extends Comparable> List<T> sortList(List<T> arrayList) {
+        if (arrayList == null || arrayList.isEmpty()){
+            return null;
+        }
+        else
+        {
+            //loop
+        }
+        return arrayList;
+    }
+
+    class Node<T>{
+        private T data;
+        private Node<T> left, right;
+
+        public Node(T data) {
+            this.data = data;
+        }
+    }
 
 
-public class BinaryTree<T extends Comparable<T>> {
     private Node<T> root;
 
     //Inserting data
@@ -37,11 +72,9 @@ public class BinaryTree<T extends Comparable<T>> {
 
     //Printing - ordered array
     public void inOrder(){
-
         System.out.println("Sorted:");
         inOrder(root);
     }
-
 
     private void inOrder(Node<T> root){
         if (root == null){
@@ -49,32 +82,21 @@ public class BinaryTree<T extends Comparable<T>> {
         }
         //check all the left roots/nodes first
         inOrder(root.left);
-        System.out.println(" " + root.data); //add to the list
+        arrayList.add(root.data);
         inOrder(root.right); //check all the right root/nodes
 
     }
 
-
     //array input
-    public void insertionLoop(T[] array){
+    public List<T> insertionLoop(T[] array){
         if (array == null){
-            return;
+            return null;
         }
         for (int i = 0; i < array.length; i++){
             insert(array[i]);
         }
         inOrder();
-    }
-
-
-    public static void main(String[] args) {
-        BinaryTree<Integer> binaryTree1 = new BinaryTree<>();
-        RandomArrayGenerator2 rd2 = new RandomArrayGenerator2(Integer.class);
-        Integer[] array1;
-        array1 = (Integer[]) rd2.randArray(100);
-        binaryTree1.insertionLoop(array1);
-
-
+        return this.arrayList;
     }
 
 

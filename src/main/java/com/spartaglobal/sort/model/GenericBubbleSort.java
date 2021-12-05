@@ -1,7 +1,5 @@
 package com.spartaglobal.sort.model;
-
 import com.spartaglobal.sort.controller.GenericSorter;
-
 import java.util.List;
 
 public class GenericBubbleSort implements GenericSorter {
