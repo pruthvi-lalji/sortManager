@@ -2,7 +2,7 @@ package com.spartaglobal.sort.model;
 import com.spartaglobal.sort.controller.GenericSorter;
 import java.util.List;
 
-public class GenericBubbleSort implements GenericSorter {
+public class GenericBubbleSort<T extends Comparable> implements GenericSorter {
     @Override
     public <T extends Comparable> T[] sortArray(T[] array) {
         if (array == null || array.length == 0){

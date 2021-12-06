@@ -1,5 +1,6 @@
 package com.spartaglobal.sort.controller;
 
+import com.spartaglobal.sort.model.GenericBinaryTree;
 import com.spartaglobal.sort.view.ArrayPrinter;
 import com.spartaglobal.sort.model.GenericBubbleSort;
 import com.spartaglobal.sort.model.GenericQuickSort;
@@ -33,7 +34,9 @@ public class SorterControl<T> {
     DurationTime durationTime = new DurationTime();
     GenericSorter bubbleSort = new GenericBubbleSort();
     GenericSorter quickSort = new GenericQuickSort();
+    GenericSorter binaryTree = new GenericBinaryTree<>();
     ArrayPrinter arrayPrinter = new ArrayPrinter();
+
 
 
     List<T> unsorted;
