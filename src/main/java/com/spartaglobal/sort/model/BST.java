@@ -1,13 +1,21 @@
-package com.spartaglobal.sort.com.spartaglobal;
+package com.spartaglobal.sort.model;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BST <T extends Comparable<? super T>> {
 
-
-    public void run(T[] array){
+    List<T> list = new ArrayList();
+    public T[] run(T[] array){
         for (int i = 0; i<array.length;i++){
             insert(array[i]);
         }
         inOrder();
+        Object[] sortArray = new Object [list.size()];
+        for (int i =0; i< list.size(); i++){
+            sortArray[i] = list.get(i);
+        }
+        return (T[]) sortArray;
 
     }
 
@@ -54,9 +62,29 @@ public class BST <T extends Comparable<? super T>> {
             return;
         }
         inOrder(root.left);
-        System.out.println(" " + root.element);
+        list.add(root.element);
         inOrder(root.right);
     }
+
+
+
+
+
+    public List<T> run(List<T> array){
+        for (int i = 0; i<array.size();i++){
+            insert(array.get(i));
+        }
+        inOrder();
+        Object[] sortArray = new Object [list.size()];
+        for (int i =0; i< list.size(); i++){
+            sortArray[i] = list.get(i);
+        }
+        return list;
+
+    }
+
+
+
 
 
 

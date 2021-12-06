@@ -12,6 +12,8 @@ public class GenericBinaryTree<T extends Comparable<? super T>> implements Gener
         for (int i = 0; i<array.length;i++){
             insert(array[i]);
         }
+        inOrder();
+
         return array;
     }
 

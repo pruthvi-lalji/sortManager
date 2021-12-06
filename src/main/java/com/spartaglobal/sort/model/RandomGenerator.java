@@ -29,9 +29,14 @@ public class RandomGenerator<T extends Comparable> {
     }
 
     public void randomArray(Function<Random, T> creator, int arraySize){
-         array = (T[]) new Object[arraySize];
+         list = new ArrayList<>();
         for (int i = 0; i < arraySize; i++){
-            array[i] = creator.apply(rand);
+            ///array[i] = creator.apply(rand);
+            list.add(creator.apply(rand));
+        }
+        array = (T[]) new Object[arraySize];
+        for (int i =0; i < arraySize;i++){
+            array[i] =  list.get(i);
         }
     }
 }

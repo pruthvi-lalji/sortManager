@@ -1,12 +1,10 @@
 package com.spartaglobal.sort.controller;
 
-import com.spartaglobal.sort.model.GenericBinaryTree;
+import com.spartaglobal.sort.model.*;
 import com.spartaglobal.sort.view.ArrayPrinter;
-import com.spartaglobal.sort.model.GenericBubbleSort;
-import com.spartaglobal.sort.model.GenericQuickSort;
-import com.spartaglobal.sort.model.RandomGenerator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SorterControl<T> {
@@ -27,22 +25,24 @@ public class SorterControl<T> {
             return endTime-startTime;
         }
 
-
     }
 
     RandomGenerator<Integer> randomGen = new RandomGenerator<>();
     DurationTime durationTime = new DurationTime();
     GenericSorter bubbleSort = new GenericBubbleSort();
     GenericSorter quickSort = new GenericQuickSort();
-    GenericSorter binaryTree = new GenericBinaryTree<>();
+    //GenericSorter binaryTree = new GenericBinaryTree<>();
     ArrayPrinter arrayPrinter = new ArrayPrinter();
+    BST bst = new BST();
 
 
 
-    List<T> unsorted;
+    private List<T> unsortedList;
+    private T[] unsortedArray;
 
     public <T extends Comparable>void bubbleSort(int arrayType, int arraySize){
-           //randomGen.randomArray(random -> random.nextInt(1000),  arraySize);
+        System.out.println("Bubble Sort:");
+           // randomGen.randomArray(random -> random.nextInt(1000),  arraySize);
             randomGen.randomList(random -> random.nextInt(1000), arraySize);
         if (arrayType == 1){
             //Need to change to array currently using arrayList;
@@ -55,12 +55,18 @@ public class SorterControl<T> {
         else{
             //bubbleSort(randomGen.getArray());
             bubbleSort(randomGen.getList());
+
         }
     }
 
 
 
-    private  <T extends Comparable> void bubbleSort(T[] array){
+    private  <T extends Comparable<T>> void bubbleSort(T[] array){
+        durationTime.setStartTime(System.nanoTime());
+        T[] array2 = bubbleSort.sortArray(array);
+        durationTime.setEndTime(System.nanoTime());
+        arrayPrinter.displayArray(unsortedArray, array2, durationTime.getDuration());
+
         //Implement Methods
     }
 
@@ -70,14 +76,16 @@ public class SorterControl<T> {
         durationTime.setStartTime(System.nanoTime());
         copyArrayList(array);
         List<T> sortedList  = bubbleSort.sortList(array);
+
         durationTime.setEndTime(System.nanoTime());
-        arrayPrinter.displayArrayList(unsorted, sortedList,durationTime.getDuration());
+        arrayPrinter.displayArrayList(unsortedList, sortedList,durationTime.getDuration());
     }
 
 
 
 
     public <T extends Comparable> void quickSort(int arrayType, int arraySize){
+        System.out.println("Quick Sort: ");
         randomGen.randomList(random -> random.nextInt(1000), arraySize);
         //randomGen.randomArray(random -> random.nextInt(1000),  arraySize);
         if (arrayType == 1){
@@ -110,6 +118,7 @@ public class SorterControl<T> {
 
 
     public <T extends Comparable> void binarySort(int arrayType, int arraySize){
+        System.out.println("Binary Tree Sort: ");
         randomGen.randomList(random -> random.nextInt(1000), arraySize);
         //randomGen.randomArray(random -> random.nextInt(1000),  arraySize);
         if (arrayType == 1){
@@ -135,18 +144,28 @@ public class SorterControl<T> {
     }
     private <T extends Comparable> void binarySort(List<T> array){
         durationTime.setStartTime(System.nanoTime());
-
+        List<T> unsortedList = new ArrayList<>(array);
+        bst.run(array);
         durationTime.setEndTime(System.nanoTime());
         durationTime.getDuration();
+        arrayPrinter.displayArrayList(unsortedList,array,durationTime.getDuration());
     }
 
 
 
     //Copying arrays;
     private <T extends Comparable> List<T> copyArrayList(List<T> arrayList){
-        unsorted = new ArrayList(arrayList);
-        return (List<T>) unsorted;
+        unsortedList = new ArrayList(arrayList);
+        return (List<T>) unsortedList;
     }
+
+    private <T extends Comparable> T[] arrayConverter(List<T> genArray){
+        System.out.println(genArray);
+        T[] unsortedArray = (T[]) genArray.toArray();
+        return unsortedArray;
+    }
+
+
 
 
 

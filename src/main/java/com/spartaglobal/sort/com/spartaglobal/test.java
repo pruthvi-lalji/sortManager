@@ -1,10 +1,9 @@
 package com.spartaglobal.sort.com.spartaglobal;
 
-import com.spartaglobal.sort.controller.GenericSorter;
+import com.spartaglobal.sort.model.BST;
 import com.spartaglobal.sort.model.GenericBinaryTree;
 
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class test {
@@ -19,7 +18,7 @@ public class test {
 
 
         GenericBinaryTree gen4 = new GenericBinaryTree<>();
-        System.out.println(Arrays.toString(gen4.binaryRun(array)));
+        //System.out.println(Arrays.toString(gen4.binaryRun(array)));
 
         BST bst = new BST();
         bst.run(array);

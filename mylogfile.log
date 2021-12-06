@@ -5,3 +5,5 @@ java.lang.NumberFormatException: For input string: "g"
 	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
 	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:34) [classes/:?]
 	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
+FILE [INFO ] 2021-12-06 08:23:41,219 main UserControll - User inputted incorrect value
+FILE [INFO ] 2021-12-06 08:47:08,850 main UserControll - Invalid response entered by user { 5 }

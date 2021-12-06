@@ -51,17 +51,25 @@ public class UserControll<T> {
         int arraySize = arraySizePicker();
         switch (userInput){
             case 1:
+
                 sorterControl.bubbleSort(pickedOption.value, arraySize);
                 break;
             case 2:
+
+                sorterControl.quickSort(pickedOption.value,arraySize);
                 //quick sort
 
                 break;
             case 3:
                 //binary sort
+
+                sorterControl.binarySort(pickedOption.value, arraySize);
                 break;
             case 4:
-                //all the methods
+                System.out.println("All sorting method: ");
+                sorterControl.bubbleSort(pickedOption.value,arraySize);
+                sorterControl.quickSort(pickedOption.value,arraySize);
+                sorterControl.binarySort(pickedOption.value,arraySize);
                 break;
             default:
                 System.out.println("Invalid option picked!");

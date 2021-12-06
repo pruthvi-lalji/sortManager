@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ArrayPrinter<T> {
 
-    public void arrayPrinter(T[] unsorted, T[] sorted, long duration){
+    public void displayArray(T[] unsorted, T[] sorted, long duration){
         System.out.println("Unsorted List: ");
         System.out.println(Arrays.toString(unsorted));
         System.out.println("Sorted List:");
