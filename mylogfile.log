@@ -1,54 +1,197 @@
-FILE [ERROR] 2021-12-05 23:43:52,808 main UserControll - String parsing error, user entered:  { g }
-java.lang.NumberFormatException: For input string: "g"
+FILE [INFO ] 2021-12-06 21:08:09,890 main UserControl - Bubble sorted picked with array size of 10
+FILE [INFO ] 2021-12-06 21:08:09,892 main SorterControl - Generating List...
+FILE [INFO ] 2021-12-06 21:08:09,895 main SorterControl - Array sorted: [36, 250, 288, 291, 666, 713, 723, 874, 915, 988] 
+Time Taken: 18600
+FILE [INFO ] 2021-12-06 21:08:30,741 main UserControl - All sorting method picked with array size of 20
+FILE [INFO ] 2021-12-06 21:08:30,744 main SorterControl - Generating Array...
+FILE [INFO ] 2021-12-06 21:08:30,746 main SorterControl - Array sorted: [36, 59, 119, 250, 256, 288, 291, 352, 380, 457, 478, 622, 666, 713, 717, 723, 773, 874, 915, 988] 
+Time Taken: 20500
+FILE [INFO ] 2021-12-06 21:08:30,748 main SorterControl - Generating List...
+FILE [INFO ] 2021-12-06 21:08:30,748 main SorterControl - Array sorted: [100, 244, 292, 428, 429, 468, 487, 506, 531, 565, 653, 694, 716, 728, 767, 772, 848, 873, 895, 974] 
+Time Taken: 76300
+FILE [INFO ] 2021-12-06 21:08:30,749 main SorterControl - Generating Array...
+FILE [INFO ] 2021-12-06 21:08:30,749 main SorterControl - Array sorted: [255, 500, 39, 171, 131, 602, 285, 215, 462, 900, 258, 536, 919, 708, 859, 545, 25, 352, 445, 248] 
+Time Taken: 14800
+FILE [INFO ] 2021-12-06 21:08:30,749 main SorterControl - Generating List...
+FILE [INFO ] 2021-12-06 21:08:30,750 main SorterControl - Array sorted: [346, 857, 222, 154, 688, 834, 453, 877, 911, 471, 530, 456, 0, 551, 824, 763, 492, 32, 287, 583] 
+Time Taken: 46000
+FILE [INFO ] 2021-12-06 21:08:30,750 main SorterControl - Generating Array/List...
+FILE [INFO ] 2021-12-06 21:08:30,751 main SorterControl - Array sorted: [646, 126, 398, 193, 734, 871, 894, 112, 633, 38, 626, 928, 190, 553, 179, 539, 59, 826, 55, 452] 
+Time Taken: 513500
+FILE [INFO ] 2021-12-06 21:10:55,557 main UserControl - All sorting method picked with array size of 30
+FILE [INFO ] 2021-12-06 21:10:55,560 main SorterControl - Generating Array...
+FILE [INFO ] 2021-12-06 21:10:55,563 main SorterControl - Array sorted: [Ljava.lang.Integer;@19d481b 
+Time Taken: 0.047299999999999995 ms
+FILE [INFO ] 2021-12-06 21:10:55,563 main SorterControl - Generating List...
+FILE [INFO ] 2021-12-06 21:10:55,564 main SorterControl - List sorted: [25, 39, 131, 171, 215, 244, 248, 255, 258, 285, 352, 429, 445, 462, 468, 487, 500, 506, 536, 545, 602, 694, 708, 716, 859, 873, 895, 900, 919, 974] 
+Time Taken: 0.1143 ms
+FILE [INFO ] 2021-12-06 21:10:55,564 main SorterControl - Generating Array...
+FILE [INFO ] 2021-12-06 21:10:55,565 main SorterControl - Array sorted: [Ljava.lang.Integer;@1f97cf0d 
+Time Taken: 0.0209 ms
+FILE [INFO ] 2021-12-06 21:10:55,565 main SorterControl - Generating List...
+FILE [INFO ] 2021-12-06 21:10:55,565 main SorterControl - List sorted: [626, 928, 190, 553, 179, 539, 59, 826, 55, 452, 910, 191, 521, 759, 857, 262, 868, 816, 84, 224, 704, 678, 310, 400, 8, 212, 334, 697, 586, 884] 
+Time Taken: 0.0395 ms
+FILE [INFO ] 2021-12-06 21:10:55,566 main SorterControl - Generating Array/List...
+FILE [INFO ] 2021-12-06 21:10:55,567 main SorterControl - List sorted: [339, 257, 245, 688, 452, 638, 369, 943, 930, 700, 208, 416, 649, 816, 235, 205, 141, 955, 183, 151, 538, 966, 998, 138, 499, 311, 297, 397, 292, 62] 
+Time Taken: 0.5081 ms
+FILE [INFO ] 2021-12-06 21:13:11,235 main UserControl - All sorting method picked with array size of 10
+FILE [INFO ] 2021-12-06 21:13:11,237 main SorterControl - Bubble Sort: 
+FILE [INFO ] 2021-12-06 21:13:11,237 main SorterControl - Generating Array...
+FILE [INFO ] 2021-12-06 21:13:11,240 main SorterControl - Array sorted: [36, 250, 288, 291, 666, 713, 723, 874, 915, 988] 
+Time Taken: 0.0081 ms
+FILE [INFO ] 2021-12-06 21:13:11,240 main SorterControl - Generating List...
+FILE [INFO ] 2021-12-06 21:13:11,241 main SorterControl - List sorted: [59, 119, 256, 352, 380, 457, 478, 622, 717, 773] 
+Time Taken: 0.020499999999999997 ms
+FILE [INFO ] 2021-12-06 21:13:11,241 main SorterControl - Quick Sort: 
+FILE [INFO ] 2021-12-06 21:13:11,241 main SorterControl - Generating Array...
+FILE [INFO ] 2021-12-06 21:13:11,241 main SorterControl - Array sorted: [653, 428, 565, 772, 767, 531, 848, 292, 100, 728] 
+Time Taken: 0.015 ms
+FILE [INFO ] 2021-12-06 21:13:11,242 main SorterControl - Generating List...
+FILE [INFO ] 2021-12-06 21:13:11,242 main SorterControl - List sorted: [974, 895, 716, 873, 244, 694, 487, 468, 506, 429] 
+Time Taken: 0.0189 ms
+FILE [INFO ] 2021-12-06 21:13:11,242 main SorterControl - Binary Tree Sort: 
+FILE [INFO ] 2021-12-06 21:13:11,242 main SorterControl - Generating Array/List...
+FILE [INFO ] 2021-12-06 21:13:11,243 main SorterControl - List sorted: [255, 500, 39, 171, 131, 602, 285, 215, 462, 900] 
+Time Taken: 0.4814 ms
+FILE [ERROR] 2021-12-06 21:14:38,768 main UserControl - String parsing error, user entered:  { f }
+java.lang.NumberFormatException: For input string: "f"
 	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
 	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
 	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
-	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:34) [classes/:?]
-	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
-FILE [INFO ] 2021-12-06 08:23:41,219 main UserControll - User inputted incorrect value
-FILE [INFO ] 2021-12-06 08:47:08,850 main UserControll - Invalid response entered by user { 5 }
-FILE [INFO ] 2021-12-06 09:21:20,903 main UserControll - Bubble sorted picked with array size of 50
-FILE [ERROR] 2021-12-06 09:21:20,907 main UserControll - Unable to sort Array 
-java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.Integer; ([Ljava.lang.Object; and [Ljava.lang.Integer; are in module java.base of loader 'bootstrap')
-	at com.spartaglobal.sort.controller.SorterControl.bubbleSort(SorterControl.java:50) [classes/:?]
-	at com.spartaglobal.sort.controller.UserControll.userControl(UserControll.java:55) [classes/:?]
-	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:40) [classes/:?]
-	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
-FILE [INFO ] 2021-12-06 09:22:19,730 main UserControll - Bubble sorted picked with array size of 60
-FILE [ERROR] 2021-12-06 09:23:04,470 main UserControll - Unable to sort Array 
-java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.Integer; ([Ljava.lang.Object; and [Ljava.lang.Integer; are in module java.base of loader 'bootstrap')
-	at com.spartaglobal.sort.controller.SorterControl.bubbleSort(SorterControl.java:50) [classes/:?]
-	at com.spartaglobal.sort.controller.UserControll.userControl(UserControll.java:55) [classes/:?]
-	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:40) [classes/:?]
-	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
-FILE [INFO ] 2021-12-06 09:23:10,954 main UserControll - Bubble sorted picked with array size of 10
-FILE [ERROR] 2021-12-06 09:23:10,960 main UserControll - Unable to sort Array 
-java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.Integer; ([Ljava.lang.Object; and [Ljava.lang.Integer; are in module java.base of loader 'bootstrap')
-	at com.spartaglobal.sort.controller.SorterControl.bubbleSort(SorterControl.java:50) [classes/:?]
-	at com.spartaglobal.sort.controller.UserControll.userControl(UserControll.java:55) [classes/:?]
-	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:40) [classes/:?]
-	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
-FILE [INFO ] 2021-12-06 09:24:35,798 main UserControll - Bubble sorted picked with array size of 50
-FILE [INFO ] 2021-12-06 09:25:39,565 main UserControll - Bubble sorted picked with array size of 40
-FILE [ERROR] 2021-12-06 09:25:39,569 main UserControll - Unable to sort Array 
-java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.Integer; ([Ljava.lang.Object; and [Ljava.lang.Integer; are in module java.base of loader 'bootstrap')
-	at com.spartaglobal.sort.controller.SorterControl.bubbleSort(SorterControl.java:50) [classes/:?]
-	at com.spartaglobal.sort.controller.UserControll.userControl(UserControll.java:55) [classes/:?]
-	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:40) [classes/:?]
-	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
-FILE [INFO ] 2021-12-06 19:59:48,959 main UserControl - Bubble sorted picked with array size of 40
-FILE [INFO ] 2021-12-06 20:00:51,208 main UserControl - Bubble sorted picked with array size of 50
-FILE [INFO ] 2021-12-06 20:01:53,485 main UserControl - Bubble sorted picked with array size of 100
-FILE [INFO ] 2021-12-06 20:03:03,050 main UserControl - Bubble sorted picked with array size of 30
-FILE [INFO ] 2021-12-06 20:05:26,077 main UserControl - Bubble sorted picked with array size of 500
-FILE [INFO ] 2021-12-06 20:11:35,702 main UserControl - Bubble sorted picked with array size of 400
-FILE [INFO ] 2021-12-06 20:13:10,372 main UserControl - Bubble sorted picked with array size of 100
-FILE [INFO ] 2021-12-06 20:22:00,441 main UserControl - All sorting method picked with array size of 50
-FILE [INFO ] 2021-12-06 20:23:13,375 main UserControl - Binary Tree sorted picked with array size of 40
-FILE [INFO ] 2021-12-06 20:23:22,526 main UserControl - All sorting method picked with array size of 40
-FILE [INFO ] 2021-12-06 20:24:14,780 main UserControl - Bubble sorted picked with array size of 10
-FILE [INFO ] 2021-12-06 20:26:17,438 main UserControl - All sorting method picked with array size of 10
-FILE [INFO ] 2021-12-06 20:27:40,667 main UserControl - Quick sorted picked with array size of 10
-FILE [INFO ] 2021-12-06 20:28:42,451 main UserControl - All sorting method picked with array size of 10
-FILE [INFO ] 2021-12-06 20:31:59,595 main UserControl - All sorting method picked with array size of 100
-FILE [INFO ] 2021-12-06 20:38:16,312 main UserControl - All sorting method picked with array size of 100
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:32) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [ERROR] 2021-12-06 21:14:38,780 main UserControl - String parsing error, user entered:  { rgr }
+java.lang.NumberFormatException: For input string: "rgr"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:32) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [ERROR] 2021-12-06 21:14:38,780 main UserControl - String parsing error, user entered:  { rerge }
+java.lang.NumberFormatException: For input string: "rerge"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:32) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [INFO ] 2021-12-06 21:14:50,916 main UserControl - Invalid response entered by user { 5 }
+FILE [ERROR] 2021-12-06 21:14:53,722 main UserControl - String parsing error, user entered:  { fgshs425 }
+java.lang.NumberFormatException: For input string: "fgshs425"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:32) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:36) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [ERROR] 2021-12-06 21:14:55,181 main UserControl - String parsing error, user entered:  { 4rsf }
+java.lang.NumberFormatException: For input string: "4rsf"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:32) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:36) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [ERROR] 2021-12-06 21:14:59,937 main UserControl - Parsing Error occured at listOption 
+java.lang.NumberFormatException: For input string: "arfaergr"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:89) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.userControl(UserControl.java:47) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:38) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:36) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [ERROR] 2021-12-06 21:15:01,316 main UserControl - Parsing Error occured at listOption 
+java.lang.NumberFormatException: For input string: "4w4r43"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:89) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:93) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.userControl(UserControl.java:47) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:38) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:36) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [INFO ] 2021-12-06 21:15:02,500 main UserControl - User inputted incorrect value
+FILE [ERROR] 2021-12-06 21:15:03,614 main UserControl - Parsing Error occured at listOption 
+java.lang.NumberFormatException: For input string: "qe4tfdgdfg"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:89) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:107) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:93) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:93) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.userControl(UserControl.java:47) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:38) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:36) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [INFO ] 2021-12-06 21:15:07,634 main UserControl - User Exited System
+FILE [ERROR] 2021-12-06 21:15:07,634 main UserControl - String parsing error, user entered:  { x }
+java.lang.NumberFormatException: For input string: "x"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:32) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:88) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:93) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:107) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:93) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:93) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.userControl(UserControl.java:47) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:38) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:36) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [INFO ] 2021-12-06 21:15:09,846 main UserControl - User Exited System
+FILE [ERROR] 2021-12-06 21:15:09,846 main UserControl - String parsing error, user entered:  { x }
+java.lang.NumberFormatException: For input string: "x"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:668) ~[?:?]
+	at java.lang.Integer.parseInt(Integer.java:786) ~[?:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:32) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:88) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:93) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:107) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:93) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.listOption(UserControl.java:93) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.userControl(UserControl.java:47) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:38) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:36) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControl.start(UserControl.java:42) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:10) [classes/:?]
+FILE [INFO ] 2021-12-06 21:16:59,035 main UserControl - User Exited System

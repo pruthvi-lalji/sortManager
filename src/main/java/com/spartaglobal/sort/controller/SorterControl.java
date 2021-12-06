@@ -16,18 +16,24 @@ public class SorterControl {
     GenericSorter quickSort = new GenericQuickSort();
     TreeSort treeSort = new TreeSort();;
     ArrayPrinter arrayPrinter = new ArrayPrinter();
+    private final LogGenerator logger = new LogGenerator(SorterControl.class);
 
 
     public void bubbleSort(int value, int arraySize) {
         System.out.println("Bubble Sort: ");
+        logger.userLogger("Bubble Sort: ");
         if (value == 1){;
+            logger.userLogger("Generating Array...");
             bubbleSort(randomGenerator.arrayGen(arraySize));
         }
         else if (value == 2){
+            logger.userLogger("Generating List...");
             bubbleSort(randomGenerator.listGen(arraySize));
         }
         else{
+            logger.userLogger("Generating Array...");
             bubbleSort(randomGenerator.arrayGen(arraySize));
+            logger.userLogger("Generating List...");
             bubbleSort(randomGenerator.listGen(arraySize));
         }
         System.out.println();
@@ -49,15 +55,20 @@ public class SorterControl {
 
     public void quickSort(int value, int arraySize) {
         System.out.println("QuickSort: ");
+        logger.userLogger("Quick Sort: ");
         if (value == 1){
+            logger.userLogger("Generating Array...");
             quickSort(randomGenerator.arrayGen(arraySize));
         }
         else if (value == 2){
+            logger.userLogger("Generating List...");
             quickSort(randomGenerator.listGen(arraySize));
         }
         else{
             //both
+            logger.userLogger("Generating Array...");
             quickSort(randomGenerator.arrayGen(arraySize));
+            logger.userLogger("Generating List...");
             quickSort(randomGenerator.listGen(arraySize));
         }
         System.out.println();
@@ -79,6 +90,8 @@ public class SorterControl {
 
     public void binarySort(int value, int arraySize) {
         System.out.println("Binary Tree Sort: ");
+        logger.userLogger("Binary Tree Sort: ");
+        logger.userLogger("Generating Array/List...");
         List<Integer> unsortedList = randomGenerator.listGen(arraySize);
         List<Integer> sortedList = new ArrayList<>(unsortedList);
         treeSort.sort(sortedList);

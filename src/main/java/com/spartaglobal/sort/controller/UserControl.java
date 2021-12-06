@@ -27,7 +27,7 @@ public class UserControl {
         if (userInputted.equals("X") || userInputted.equals("x")){
             System.out.println("Exited!");
             logger.userLogger("User Exited System");
-        }
+        }else {
         try {
             userInput = Integer.parseInt(userInputted);
             if (userInput > 4){
@@ -40,6 +40,7 @@ public class UserControl {
             System.out.println("Enter a valid response!");
             logger.errorLogger("String parsing error, user entered:  { "+ userInputted +" }", e);
             start();
+        }
         }
     }
 
