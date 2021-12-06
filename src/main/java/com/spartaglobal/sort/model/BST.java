@@ -7,6 +7,9 @@ public class BST <T extends Comparable<? super T>> {
 
     List<T> list = new ArrayList();
     public T[] run(T[] array){
+        if (array == null || array.length == 0){
+            return null;
+        }
         for (int i = 0; i<array.length;i++){
             insert(array[i]);
         }
@@ -71,6 +74,9 @@ public class BST <T extends Comparable<? super T>> {
 
 
     public List<T> run(List<T> array){
+        if (array == null || array.isEmpty()){
+            return null;
+        }
         for (int i = 0; i<array.size();i++){
             insert(array.get(i));
         }
