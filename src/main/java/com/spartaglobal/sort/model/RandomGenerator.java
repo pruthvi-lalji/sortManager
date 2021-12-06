@@ -1,42 +1,36 @@
 package com.spartaglobal.sort.model;
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.function.Function;
 
-public class RandomGenerator<T extends Comparable> {
-    private T[] array;
-    private List<T> list;
-    private Random rand = new Random(100);
-    private Object[] a;
+public class RandomGenerator {
+    Random rand = new Random(100);
 
-
-    public List<T> getList(){
-        return list;
-
-    }
-    public T[] getArray(){
+    public Integer[] arrayGen(int arraySize){
+        Integer[] array = new Integer[arraySize];
+        for (int i=0; i < arraySize; i++){
+            array[i] = rand.nextInt(1000);
+        }
         return array;
     }
 
-    public void randomList(Function<Random, T> creator, int arraySize){
-        list = new ArrayList<T>();
+    public List<Integer> listGen(int arraySize){
+        List<Integer> list = new ArrayList<>();
         for (int i =0; i < arraySize; i++){
-            list.add(creator.apply(rand));
+            list.add(rand.nextInt(1000));
         }
+        return list;
     }
 
-    public void randomArray(Function<Random, T> creator, int arraySize){
-         list = new ArrayList<>();
-        for (int i = 0; i < arraySize; i++){
-            ///array[i] = creator.apply(rand);
-            list.add(creator.apply(rand));
-        }
-        array = (T[]) new Object[arraySize];
-        for (int i =0; i < arraySize;i++){
-            array[i] =  list.get(i);
-        }
-    }
+
+
+
+
+
+
+
+
+
+
 }

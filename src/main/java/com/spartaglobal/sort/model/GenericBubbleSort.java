@@ -1,13 +1,17 @@
 package com.spartaglobal.sort.model;
+
 import com.spartaglobal.sort.controller.GenericSorter;
+
 import java.util.List;
 
-public class GenericBubbleSort<T extends Comparable> implements GenericSorter {
+public class GenericBubbleSort<T extends Comparable<? super T>> implements GenericSorter<T> {
+    private long sortTime;
     @Override
-    public <T extends Comparable> T[] sortArray(T[] array) {
+    public T[] sortArray(T[] array) {
         if (array == null || array.length == 0){
             return null;
         }
+        long startTime = System.nanoTime();
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j].compareTo(array[j + 1]) > 0) {
@@ -17,14 +21,17 @@ public class GenericBubbleSort<T extends Comparable> implements GenericSorter {
                 }
             }
         }
+        long endTime = System.nanoTime();
+        sortTime = endTime-startTime;
         return array;
     }
 
     @Override
-    public <T extends Comparable> List<T> sortList(List<T> arrayList) {
+    public List<T> sort(List<T> arrayList) {
         if (arrayList == null || arrayList.isEmpty()){
             return null;
         }
+        long startTime = System.nanoTime();
         boolean inOrder = false;
         while (!inOrder) {
             inOrder=true;
@@ -37,6 +44,16 @@ public class GenericBubbleSort<T extends Comparable> implements GenericSorter {
                 }
             }
         }
+        long endTime = System.nanoTime();
+        sortTime = endTime-startTime;
         return arrayList;
-}
+    }
+
+    public long sortTime(){
+        return sortTime;
+    }
+
+
+
+
 }

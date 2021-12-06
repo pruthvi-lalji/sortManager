@@ -7,3 +7,48 @@ java.lang.NumberFormatException: For input string: "g"
 	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
 FILE [INFO ] 2021-12-06 08:23:41,219 main UserControll - User inputted incorrect value
 FILE [INFO ] 2021-12-06 08:47:08,850 main UserControll - Invalid response entered by user { 5 }
+FILE [INFO ] 2021-12-06 09:21:20,903 main UserControll - Bubble sorted picked with array size of 50
+FILE [ERROR] 2021-12-06 09:21:20,907 main UserControll - Unable to sort Array 
+java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.Integer; ([Ljava.lang.Object; and [Ljava.lang.Integer; are in module java.base of loader 'bootstrap')
+	at com.spartaglobal.sort.controller.SorterControl.bubbleSort(SorterControl.java:50) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControll.userControl(UserControll.java:55) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:40) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
+FILE [INFO ] 2021-12-06 09:22:19,730 main UserControll - Bubble sorted picked with array size of 60
+FILE [ERROR] 2021-12-06 09:23:04,470 main UserControll - Unable to sort Array 
+java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.Integer; ([Ljava.lang.Object; and [Ljava.lang.Integer; are in module java.base of loader 'bootstrap')
+	at com.spartaglobal.sort.controller.SorterControl.bubbleSort(SorterControl.java:50) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControll.userControl(UserControll.java:55) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:40) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
+FILE [INFO ] 2021-12-06 09:23:10,954 main UserControll - Bubble sorted picked with array size of 10
+FILE [ERROR] 2021-12-06 09:23:10,960 main UserControll - Unable to sort Array 
+java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.Integer; ([Ljava.lang.Object; and [Ljava.lang.Integer; are in module java.base of loader 'bootstrap')
+	at com.spartaglobal.sort.controller.SorterControl.bubbleSort(SorterControl.java:50) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControll.userControl(UserControll.java:55) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:40) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
+FILE [INFO ] 2021-12-06 09:24:35,798 main UserControll - Bubble sorted picked with array size of 50
+FILE [INFO ] 2021-12-06 09:25:39,565 main UserControll - Bubble sorted picked with array size of 40
+FILE [ERROR] 2021-12-06 09:25:39,569 main UserControll - Unable to sort Array 
+java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.Integer; ([Ljava.lang.Object; and [Ljava.lang.Integer; are in module java.base of loader 'bootstrap')
+	at com.spartaglobal.sort.controller.SorterControl.bubbleSort(SorterControl.java:50) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControll.userControl(UserControll.java:55) [classes/:?]
+	at com.spartaglobal.sort.controller.UserControll.start(UserControll.java:40) [classes/:?]
+	at com.spartaglobal.sort.view.SortManager.main(SortManager.java:11) [classes/:?]
+FILE [INFO ] 2021-12-06 19:59:48,959 main UserControl - Bubble sorted picked with array size of 40
+FILE [INFO ] 2021-12-06 20:00:51,208 main UserControl - Bubble sorted picked with array size of 50
+FILE [INFO ] 2021-12-06 20:01:53,485 main UserControl - Bubble sorted picked with array size of 100
+FILE [INFO ] 2021-12-06 20:03:03,050 main UserControl - Bubble sorted picked with array size of 30
+FILE [INFO ] 2021-12-06 20:05:26,077 main UserControl - Bubble sorted picked with array size of 500
+FILE [INFO ] 2021-12-06 20:11:35,702 main UserControl - Bubble sorted picked with array size of 400
+FILE [INFO ] 2021-12-06 20:13:10,372 main UserControl - Bubble sorted picked with array size of 100
+FILE [INFO ] 2021-12-06 20:22:00,441 main UserControl - All sorting method picked with array size of 50
+FILE [INFO ] 2021-12-06 20:23:13,375 main UserControl - Binary Tree sorted picked with array size of 40
+FILE [INFO ] 2021-12-06 20:23:22,526 main UserControl - All sorting method picked with array size of 40
+FILE [INFO ] 2021-12-06 20:24:14,780 main UserControl - Bubble sorted picked with array size of 10
+FILE [INFO ] 2021-12-06 20:26:17,438 main UserControl - All sorting method picked with array size of 10
+FILE [INFO ] 2021-12-06 20:27:40,667 main UserControl - Quick sorted picked with array size of 10
+FILE [INFO ] 2021-12-06 20:28:42,451 main UserControl - All sorting method picked with array size of 10
+FILE [INFO ] 2021-12-06 20:31:59,595 main UserControl - All sorting method picked with array size of 100
+FILE [INFO ] 2021-12-06 20:38:16,312 main UserControl - All sorting method picked with array size of 100

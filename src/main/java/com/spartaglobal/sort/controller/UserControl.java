@@ -1,13 +1,11 @@
 package com.spartaglobal.sort.controller;
 
+
 import java.util.Scanner;
 
-public class UserControll<T> {
-
-    private Scanner sc = new Scanner(System.in);
-
-    private final LogGenerator logger = new LogGenerator(UserControll.class);
-
+public class UserControl {
+    Scanner sc = new Scanner(System.in);
+    private final LogGenerator logger = new LogGenerator(UserControl.class);
     SorterControl sorterControl = new SorterControl();
 
     private enum Options {ARRAY(1), ARRAYLIST(2), BOTH(3);
@@ -45,39 +43,38 @@ public class UserControll<T> {
         }
     }
 
-
     private void userControl(int userInput){
-        Options pickedOption = listOption();
-        int arraySize = arraySizePicker();
-        switch (userInput){
-            case 1:
+            Options pickedOption = listOption();
+            int arraySize = arraySizePicker();
+            switch (userInput){
+                case 1:
+                    logger.userLogger("Bubble sorted picked with array size of " + arraySize);
+                    sorterControl.bubbleSort(pickedOption.value, arraySize);
+                    break;
+                case 2:
+                    logger.userLogger("Quick sorted picked with array size of " + arraySize);
+                    sorterControl.quickSort(pickedOption.value,arraySize);
+                    //quick sort
 
-                sorterControl.bubbleSort(pickedOption.value, arraySize);
-                break;
-            case 2:
-
-                sorterControl.quickSort(pickedOption.value,arraySize);
-                //quick sort
-
-                break;
-            case 3:
-                //binary sort
-
-                sorterControl.binarySort(pickedOption.value, arraySize);
-                break;
-            case 4:
-                System.out.println("All sorting method: ");
-                sorterControl.bubbleSort(pickedOption.value,arraySize);
-                sorterControl.quickSort(pickedOption.value,arraySize);
-                sorterControl.binarySort(pickedOption.value,arraySize);
-                break;
-            default:
-                System.out.println("Invalid option picked!");
-                start();
+                    break;
+                case 3:
+                    //binary sort
+                    logger.userLogger("Binary Tree sorted picked with array size of " + arraySize);
+                    sorterControl.binarySort(pickedOption.value, arraySize);
+                    break;
+                case 4:
+                    logger.userLogger("All sorting method picked with array size of " + arraySize);
+                    System.out.println("All sorting method: ");
+                    sorterControl.bubbleSort(pickedOption.value,arraySize);
+                    sorterControl.quickSort(pickedOption.value,arraySize);
+                    sorterControl.binarySort(pickedOption.value,arraySize);
+                    break;
+                default:
+                    System.out.println("Invalid option picked!");
+                    start();
+            }
+            start();
         }
-        start();
-    }
-
 
     //List of options picking
     private Options listOption(){
@@ -112,7 +109,6 @@ public class UserControll<T> {
         return null;
     }
 
-
     //arraysize picker
     private int arraySizePicker(){
         System.out.println("Enter the size of array to be sorted!");
@@ -130,10 +126,4 @@ public class UserControll<T> {
     }
 
 
-
-  /*  private T[] genArray(){
-        return T[];
-    }*/
-
-
-}
+    }

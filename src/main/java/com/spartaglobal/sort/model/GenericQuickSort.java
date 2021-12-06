@@ -2,95 +2,100 @@ package com.spartaglobal.sort.model;
 
 import com.spartaglobal.sort.controller.GenericSorter;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class GenericQuickSort implements GenericSorter {
+public class GenericQuickSort<T extends Comparable<? super T>> implements GenericSorter<T> {
+    private long sortTime;
     @Override
-    public <T extends Comparable> T[] sortArray(T[] array) {
-        if (array == null || array.length ==0){
+    public T[] sortArray(T[] array) {
+        if (array == null || array.length == 0){
             return null;
         }
-        if (array.length == 1){
-            return array;
-        }
-        quickSort(array, 0, array.length-1);
-        return array;
+        long startTime = System.nanoTime();
+        T[] arrayToSort = Arrays.copyOf(array,array.length);
+        quickSort(arrayToSort, 0, arrayToSort.length-1);
+        long endTime = System.nanoTime();
+        sortTime = endTime-startTime;
+        return arrayToSort;
     }
 
-
-    private <T extends Comparable> T[] quickSort(T[] array, int lowIdx, int highIdx){
+    private void quickSort(T[] arr, int lowIdx, int highIdx){
         if (lowIdx < highIdx){
-            int p = partition(array, lowIdx, highIdx);
-            quickSort(array, lowIdx, p-1);
-            quickSort(array, p, highIdx);
+            int p = partition(arr, lowIdx, highIdx);
+            quickSort(arr, lowIdx, p-1);
+            quickSort(arr, p, highIdx);
         }
-        return array;
     }
 
-    private <T extends Comparable<T>> int partition(T[] array, int lowIdx, int highIdx){
-        T pivot = array[lowIdx];
-
+    private int partition(T[] arr, int lowIdx, int highIdx){
+        T pivot = arr[lowIdx];
         while(highIdx >= lowIdx){
-            while(array[lowIdx].compareTo(pivot) < 0){
+            while(arr[lowIdx].compareTo(pivot) < 0){
                 lowIdx++;
             }
-            while (pivot.compareTo(array[highIdx])<0){
+            while (pivot.compareTo(arr[highIdx])<0){
                 highIdx--;
             }
             if (highIdx >= lowIdx){
-                T temp = array[lowIdx];
-                array[lowIdx] = array[highIdx];
-                array[highIdx] = temp;
+                T temp = arr[lowIdx];
+                arr[lowIdx] = arr[highIdx];
+                arr[highIdx] = temp;
                 ++lowIdx;
                 --highIdx;
             }
-
         }
         return lowIdx;
 
     }
 
-
-
-
-
     @Override
-    public <T extends Comparable> List<T> sortList(List<T> arrayList) {
+    public List<T> sort(List<T> arrayList) {
         if (arrayList == null || arrayList.isEmpty()){
             return null;
         }
-        quickSort(arrayList, 0, arrayList.size()-1);
-        return arrayList;
+        long startTime = System.nanoTime();
+        List<T> listToSort = new ArrayList<>(arrayList);
+        quickSort(listToSort, 0, arrayList.size()-1);
+        long endTime = System.nanoTime();
+        sortTime = endTime-startTime;
+        return listToSort;
     }
 
-
-    private <T extends Comparable<? super T>> List<T> quickSort(List<T> arrayList, int lowIdx, int highIdx){
+    private void quickSort(List<T> arr, int lowIdx, int highIdx){
         if (lowIdx < highIdx){
-            int p = partition(arrayList, lowIdx, highIdx);
-            quickSort(arrayList, lowIdx, p-1);
-            quickSort(arrayList, p+1, highIdx);
+            int p = partition(arr, lowIdx, highIdx);
+            quickSort(arr, lowIdx, p-1);
+            quickSort(arr, p+1, highIdx);
         }
-        return arrayList;
     }
 
 
-
-    private <T extends Comparable<? super T>> int partition(List<T> arrayList, int lowIdx, int highIdx){
-        T pivot = arrayList.get(highIdx);
+    private int partition(List<T> arr, int lowIdx, int highIdx){
+        T pivot = arr.get(highIdx);
         int i = (lowIdx-1);
-        for (int j = lowIdx; j <= arrayList.size()-1; j++){
-            if (arrayList.get(j).compareTo(pivot) < 0){
+        for (int j = lowIdx; j <= arr.size()-1; j++){
+            if (arr.get(j).compareTo(pivot) < 0){
                 i++;
                 //swap
-                T temp = arrayList.get(j);
-                arrayList.set(j, arrayList.get(i));
-                arrayList.set(i, temp);
+                T temp = arr.get(j);
+                arr.set(j, arr.get(i));
+                arr.set(i, temp);
             }
         }
-        T temp = arrayList.get(i+1);
-        arrayList.set(i+1, arrayList.get(highIdx));
-        arrayList.set(highIdx, temp);
+        T temp = arr.get(i+1);
+        arr.set(i+1, arr.get(highIdx));
+        arr.set(highIdx, temp);
         return i+1;
     }
-}
 
+
+    @Override
+    public long sortTime() {
+        return sortTime;
+    }
+
+
+
+}

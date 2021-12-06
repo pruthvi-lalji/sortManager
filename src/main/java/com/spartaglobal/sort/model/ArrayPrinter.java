@@ -1,4 +1,4 @@
-package com.spartaglobal.sort.view;
+package com.spartaglobal.sort.model;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +10,8 @@ public class ArrayPrinter<T> {
         System.out.println(Arrays.toString(unsorted));
         System.out.println("Sorted List:");
         System.out.println(Arrays.toString(sorted));
-        System.out.println(duration*0.000001 + " ms");
+        System.out.println("Time Taken: "+ duration*0.000001 + " ms");
+
     }
 
     public void displayArrayList(List<T> unsorted, List<T> sorted, long duration){
@@ -18,10 +19,8 @@ public class ArrayPrinter<T> {
         System.out.println(unsorted);
         System.out.println("Sorted List:");
         System.out.println(sorted);
-        System.out.println(duration*0.000001 + " ms");
+        System.out.println("Time Taken: "+ duration*0.000001 + " ms");
     }
-
-
 
 
 }
